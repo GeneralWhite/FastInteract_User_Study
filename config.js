@@ -1,4 +1,4 @@
 window.STUDY_CONFIG = {
-  supabaseUrl: '',
-  supabaseKey: '', // Publishable / anon key ONLY. Never a service_role or secret key.
+  supabaseUrl: 'https://wusxrjdfgofacseexvwh.supabase.co',
+  supabaseKey: 'sb_publishable_lDJUIaqhVpoJVfBjHI8QLw__nouGvmj', // Public publishable key; never use administrator keys here.
 };
