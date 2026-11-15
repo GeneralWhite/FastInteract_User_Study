@@ -27,3 +27,8 @@ header{height:60px}
  .comparison-grid .video-card video{flex:none;height:auto;aspect-ratio:1}
  .media-controls p{display:block}
 }
+
+/* Nine-method cohort: three columns and three rows alongside references. */
+.comparison-grid.nine-methods{height:clamp(540px,calc(100svh - 265px),900px);grid-template-columns:clamp(180px,18vw,250px) minmax(0,1fr)}
+.comparison-grid.nine-methods .videos{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr))}
+@media(max-width:900px){.comparison-grid.nine-methods{grid-template-columns:minmax(0,1fr);height:auto}.comparison-grid.nine-methods .videos{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:none;grid-auto-rows:auto}.comparison-grid.nine-methods .video-card video{aspect-ratio:3/4}.comparison-grid.nine-methods .video-label{padding:6px;gap:3px}.comparison-grid.nine-methods .video-label b{font-size:13px}}
