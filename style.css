@@ -32,3 +32,15 @@ header{height:60px}
 .comparison-grid.nine-methods{height:clamp(540px,calc(100svh - 265px),900px);grid-template-columns:clamp(180px,18vw,250px) minmax(0,1fr)}
 .comparison-grid.nine-methods .videos{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr))}
 @media(max-width:900px){.comparison-grid.nine-methods{grid-template-columns:minmax(0,1fr);height:auto}.comparison-grid.nine-methods .videos{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:none;grid-auto-rows:auto}.comparison-grid.nine-methods .video-card video{aspect-ratio:3/4}.comparison-grid.nine-methods .video-label{padding:6px;gap:3px}.comparison-grid.nine-methods .video-label b{font-size:13px}}
+
+/* Prioritize readable video detail over fitting all three rows into one viewport. */
+.comparison-grid.nine-methods{height:auto;align-items:start;grid-template-columns:clamp(210px,18vw,260px) minmax(0,1fr);gap:14px}
+.comparison-grid.nine-methods .videos{grid-template-rows:repeat(3,auto);gap:14px}
+.comparison-grid.nine-methods .video-card video{flex:none;height:auto;aspect-ratio:1;object-fit:contain}
+.comparison-grid.nine-methods .references{position:sticky;top:16px;height:min(760px,calc(100svh - 32px));align-self:start}
+@media(max-width:900px){
+ .comparison-grid.nine-methods{grid-template-columns:minmax(0,1fr)}
+ .comparison-grid.nine-methods .references{position:static;height:auto}
+ .comparison-grid.nine-methods .video-card video{aspect-ratio:3/4}
+}
+@media(max-width:650px){.comparison-grid.nine-methods .videos{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;gap:10px}}
