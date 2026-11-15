@@ -44,3 +44,29 @@ header{height:60px}
  .comparison-grid.nine-methods .video-card video{aspect-ratio:3/4}
 }
 @media(max-width:650px){.comparison-grid.nine-methods .videos{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;gap:10px}}
+
+/* Balanced overview, with an optional distraction-free comparison using the viewport. */
+@media(min-width:901px){
+ header{height:48px}
+ main{margin-top:10px}
+ .study-top h1{font-size:24px;margin:4px 0}
+ #steps{margin:8px 0 10px}
+ #steps button{padding:6px 0;width:36px}
+ .media-controls{margin-bottom:8px}
+ .media-controls p{font-size:10px;line-height:1.5}
+ .comparison-grid.nine-methods{height:clamp(600px,calc(100svh - 220px),1100px);align-items:stretch;gap:10px}
+ .comparison-grid.nine-methods .videos{grid-template-rows:repeat(3,minmax(0,1fr));gap:10px}
+ .comparison-grid.nine-methods .video-card video{flex:1;min-height:0;height:0;aspect-ratio:auto}
+ .comparison-grid.nine-methods .video-label{padding:6px 9px}
+ .comparison-grid.nine-methods .references{height:100%;position:static}
+ .comparison-focus{overflow:hidden}
+ .comparison-focus #study{position:fixed;inset:0;z-index:1000;background:#f4f5f0;padding:10px 14px;overflow:auto}
+ .comparison-focus #study>:not(.media-controls):not(.comparison-grid){display:none!important}
+ .comparison-focus .media-controls{display:flex;gap:6px;align-items:center;margin:0 0 8px;min-height:38px}
+ .comparison-focus .media-controls button{margin:0}
+ .comparison-focus .media-controls p{display:none}
+ .comparison-focus .comparison-grid,.comparison-focus .comparison-grid.nine-methods{height:calc(100svh - 68px);min-height:420px}
+ .comparison-focus .comparison-grid .references{position:static;height:100%}
+}
+#focus-compare{background:#17584e;color:#fff;border-color:#17584e}
+@media(max-width:900px){#focus-compare{display:none}}
