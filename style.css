@@ -70,3 +70,5 @@ header{height:60px}
 }
 #focus-compare{background:#17584e;color:#fff;border-color:#17584e}
 @media(max-width:900px){#focus-compare{display:none}}
+
+.comparison-focus>header{display:none}.comparison-focus #error{position:fixed;bottom:8px;left:14px;right:14px;z-index:1001}
